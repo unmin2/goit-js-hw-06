@@ -12,3 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector('.galary');
+const addImg = images => {const return images.map(image => {
+  const itemEl = document.createElement('li');
+  itemEl.classList.add('galary-item');
+  const imgEl = `<img class = "galary-item"
+  scr=${img.url} alt="${image.alt}" width="480" height="240">`;
+  itemEl.insertAdjacentHTML('beforeend', imgEl);
+  return itemEl;
+});
+};
+const elements = addImg(images);
+elements.forEach(element => {
+  listEl.insertAdjacentElement('beforeend', element)
+});
