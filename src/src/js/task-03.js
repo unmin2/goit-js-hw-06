@@ -14,7 +14,7 @@ const images = [
 ];
 
 const listEl = document.querySelector('.galary');
-const addImg = images => {const return images.map(image => {
+const addImg = images => { return images.map(image => {
   const itemEl = document.createElement('li');
   itemEl.classList.add('galary-item');
   const imgEl = `<img class = "galary-item"
