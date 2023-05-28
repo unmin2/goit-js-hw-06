@@ -13,17 +13,10 @@ const images = [
   },
 ];
 
-const listEl = document.querySelector('.galary');
-const addImg = images => { return images.map(image => {
-  const itemEl = document.createElement('li');
-  itemEl.classList.add('galary-item');
-  const imgEl = `<img class = "galary-item"
-  scr=${img.url} alt="${image.alt}" width="480" height="240">`;
-  itemEl.insertAdjacentHTML('beforeend', imgEl);
-  return itemEl;
+const listEl = document.querySelector('.gallery');
+let liTags = '';
+images.forEach(image => {
+  const liEl = `<li class="gallery-item"><img scr=${image.url} alt="${image.alt}" width="480" height="240"/></li>`; 
+  liTags += liEl;
 });
-};
-const elements = addImg(images);
-elements.forEach(element => {
-  listEl.insertAdjacentElement('beforeend', element)
-});
+listEl.insertAdjacentHTML('afterbegin', liTags);
