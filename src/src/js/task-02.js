@@ -6,3 +6,8 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const list = document.querySelector('.ingredients');
+const firstItem = document.createElement('li');
+firstItem.textContent = 'Potatoes';
+const list.prepend(firstItem);
+console.log(ingredients);
