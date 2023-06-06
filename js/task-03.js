@@ -16,7 +16,7 @@ const images = [
 const listEl = document.querySelector('.gallery');
 let liTags = '';
 images.forEach(image => {
-  const liEl = `<li class="gallery-item"><img scr=${image.url} alt="${image.alt}" width="480" height="240"/></li>`; 
+  const liEl = `<li class="gallery-item"><img src=${image.url} alt="${image.alt}" width="480" height="240"/></li>`; 
   liTags += liEl;
 });
 listEl.insertAdjacentHTML('afterbegin', liTags);
